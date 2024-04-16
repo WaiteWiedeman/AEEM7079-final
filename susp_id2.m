@@ -1,0 +1,9 @@
+function dx=susp_id2(x,m_b,m_w,wk)
+dx = zeros(5,1);
+dx(1) = x(3) - x(4);
+dx(2) = x(4) - wk;
+dx(3) = -x(6)/m_b*x(1) - x(5)/m_b*x(3) + x(5)/m_b*x(4);
+dx(4) = -x(6)/m_w*x(1) - x(7)/m_w*x(2) + x(5)/m_w*x(3) - x(5)/m_w*x(4);
+dx(5) = 0;
+dx(6) = 0;
+dx(7) = 0;
